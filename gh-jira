@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
-if ! command -v <the_command> &> /dev/null
-then
+if ! [ -x "$(command -v git)" ]; then
   echo This extension requires jt be installed and available on the PATH. You can install it with:
   if [[ $OSTYPE == 'darwin'* ]]; then
     echo 'brew tap StevenACoffman/jt'
